@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import xalcoLogoWhite from "@/assets/xalco-logo-white.png";
 
 const navGroups = [
   {
@@ -58,15 +59,12 @@ export function DashboardSidebar() {
     >
       {/* Logo */}
       <div className="flex items-center h-16 px-4 border-b border-sidebar-border">
-        <div className="flex items-center gap-2.5 min-w-0">
-          <div className="w-8 h-8 rounded-lg xalco-gradient-accent flex items-center justify-center flex-shrink-0">
-            <span className="text-accent-foreground font-bold text-sm">X</span>
-          </div>
-          {!collapsed && (
-            <span className="font-bold text-lg text-sidebar-accent-foreground tracking-tight">
-              XALCO
-            </span>
-          )}
+        <div className="flex items-center min-w-0">
+          <img
+            src={xalcoLogoWhite}
+            alt="XALCO"
+            className={cn("h-8 object-contain transition-all", collapsed ? "w-8" : "h-7")}
+          />
         </div>
       </div>
 

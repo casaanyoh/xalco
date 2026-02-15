@@ -9,6 +9,8 @@ import {
   Star,
   ChevronRight,
 } from "lucide-react";
+import xalcoLogoDark from "@/assets/xalco-logo-dark.png";
+import xalcoLogoWhite from "@/assets/xalco-logo-white.png";
 
 const featuredProducts = [
   { id: 1, name: "Wireless Earbuds Pro", price: "$79.99", category: "Electronics", rating: 4.8 },
@@ -40,11 +42,8 @@ export default function StoreHome() {
       <nav className="bg-card border-b border-border sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg xalco-gradient-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-sm">X</span>
-              </div>
-              <span className="font-bold text-lg text-foreground tracking-tight">XALCO</span>
+            <Link to="/" className="flex items-center">
+              <img src={xalcoLogoDark} alt="XALCO" className="h-8 object-contain" />
             </Link>
             <div className="hidden md:flex items-center gap-8">
               <Link to="/" className="text-sm font-medium text-foreground hover:text-accent transition-colors">Home</Link>
@@ -209,11 +208,8 @@ export default function StoreHome() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="col-span-2 md:col-span-1">
-              <div className="flex items-center gap-2.5 mb-3">
-                <div className="w-7 h-7 rounded-md xalco-gradient-accent flex items-center justify-center">
-                  <span className="text-accent-foreground font-bold text-xs">X</span>
-                </div>
-                <span className="font-bold text-foreground">XALCO</span>
+              <div className="mb-3">
+                <img src={xalcoLogoDark} alt="XALCO" className="h-7 object-contain" />
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Your trusted unified commerce platform. Quality products, reliable service.
