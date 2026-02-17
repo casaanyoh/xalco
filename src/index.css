@@ -9,27 +9,27 @@
     /* XALCO Design System — Professional Commerce Platform */
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 
-    /* Core palette: Dark #242627 + Gold #F8C820 */
+    /* Core palette: Deep navy + teal accent */
     --background: 220 14% 96%;
-    --foreground: 200 4% 15%;
+    --foreground: 220 20% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 4% 15%;
+    --card-foreground: 220 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 4% 15%;
+    --popover-foreground: 220 20% 12%;
 
-    --primary: 200 4% 15%;
-    --primary-foreground: 45 94% 55%;
+    --primary: 220 24% 16%;
+    --primary-foreground: 210 20% 98%;
 
     --secondary: 220 14% 92%;
-    --secondary-foreground: 200 4% 15%;
+    --secondary-foreground: 220 20% 16%;
 
     --muted: 220 14% 94%;
-    --muted-foreground: 200 4% 40%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 45 94% 55%;
-    --accent-foreground: 200 4% 15%;
+    --accent: 172 66% 40%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
@@ -45,57 +45,57 @@
 
     --border: 220 13% 89%;
     --input: 220 13% 89%;
-    --ring: 45 94% 55%;
+    --ring: 172 66% 40%;
 
     --radius: 0.5rem;
 
     /* Dashboard sidebar */
-    --sidebar-background: 200 4% 15%;
-    --sidebar-foreground: 45 94% 90%;
-    --sidebar-primary: 45 94% 55%;
-    --sidebar-primary-foreground: 200 4% 15%;
-    --sidebar-accent: 200 4% 20%;
-    --sidebar-accent-foreground: 45 94% 90%;
-    --sidebar-border: 200 4% 22%;
-    --sidebar-ring: 45 94% 55%;
-    --sidebar-muted: 200 4% 50%;
+    --sidebar-background: 220 24% 12%;
+    --sidebar-foreground: 220 14% 80%;
+    --sidebar-primary: 172 66% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 220 14% 92%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 172 66% 40%;
+    --sidebar-muted: 220 14% 50%;
 
     /* Chart colors */
-    --chart-1: 45 94% 55%;
-    --chart-2: 200 4% 15%;
+    --chart-1: 172 66% 40%;
+    --chart-2: 220 24% 16%;
     --chart-3: 38 92% 50%;
     --chart-4: 152 60% 40%;
     --chart-5: 0 72% 51%;
   }
 
   .dark {
-    --background: 200 4% 8%;
+    --background: 220 20% 8%;
     --foreground: 210 20% 98%;
-    --card: 200 4% 11%;
+    --card: 220 20% 11%;
     --card-foreground: 210 20% 98%;
-    --popover: 200 4% 11%;
+    --popover: 220 20% 11%;
     --popover-foreground: 210 20% 98%;
-    --primary: 45 94% 55%;
-    --primary-foreground: 200 4% 15%;
-    --secondary: 200 4% 16%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220 24% 16%;
+    --secondary: 220 20% 16%;
     --secondary-foreground: 210 20% 98%;
-    --muted: 200 4% 16%;
-    --muted-foreground: 200 4% 56%;
-    --accent: 45 94% 55%;
-    --accent-foreground: 200 4% 15%;
+    --muted: 220 16% 16%;
+    --muted-foreground: 220 10% 56%;
+    --accent: 172 66% 40%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 210 20% 98%;
-    --border: 200 4% 18%;
-    --input: 200 4% 18%;
-    --ring: 45 94% 55%;
-    --sidebar-background: 200 4% 6%;
-    --sidebar-foreground: 45 94% 90%;
-    --sidebar-primary: 45 94% 55%;
-    --sidebar-primary-foreground: 200 4% 15%;
-    --sidebar-accent: 200 4% 12%;
-    --sidebar-accent-foreground: 45 94% 90%;
-    --sidebar-border: 200 4% 14%;
-    --sidebar-ring: 45 94% 55%;
+    --border: 220 16% 18%;
+    --input: 220 16% 18%;
+    --ring: 172 66% 40%;
+    --sidebar-background: 220 24% 6%;
+    --sidebar-foreground: 220 14% 80%;
+    --sidebar-primary: 172 66% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 220 14% 92%;
+    --sidebar-border: 220 20% 14%;
+    --sidebar-ring: 172 66% 40%;
   }
 }
 
@@ -116,11 +116,11 @@
 
 @layer components {
   .xalco-gradient {
-    background: linear-gradient(135deg, hsl(200 4% 15%), hsl(200 4% 22%));
+    background: linear-gradient(135deg, hsl(220 24% 16%), hsl(220 24% 22%));
   }
 
   .xalco-gradient-accent {
-    background: linear-gradient(135deg, hsl(45 94% 55%), hsl(45 94% 45%));
+    background: linear-gradient(135deg, hsl(172 66% 40%), hsl(172 66% 32%));
   }
 
   .xalco-shadow-sm {
