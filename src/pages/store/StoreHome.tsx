@@ -43,7 +43,7 @@ export default function StoreHome() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center">
-              <img src={xalcoLogoDark} alt="XALCO" className="h-8 object-contain" />
+              <img src={xalcoLogoDark} alt="XALCO" className="h-11 object-contain" />
             </Link>
             <div className="hidden md:flex items-center gap-8">
               <Link to="/" className="text-sm font-medium text-foreground hover:text-accent transition-colors">Home</Link>
@@ -209,7 +209,7 @@ export default function StoreHome() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="col-span-2 md:col-span-1">
               <div className="mb-3">
-                <img src={xalcoLogoDark} alt="XALCO" className="h-7 object-contain" />
+                <img src={xalcoLogoDark} alt="XALCO" className="h-10 object-contain" />
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Your trusted unified commerce platform. Quality products, reliable service.

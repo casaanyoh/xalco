@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center">
       <div className="text-center max-w-lg mx-auto px-6">
-        <img src={xalcoLogoDark} alt="XALCO" className="h-14 object-contain mx-auto mb-6" />
+        <img src={xalcoLogoDark} alt="XALCO" className="h-20 object-contain mx-auto mb-6" />
         <p className="text-muted-foreground mb-8 leading-relaxed">
           Unified Commerce Platform — Manage your store, process sales, and sell online from one system.
         </p>
