@@ -63,7 +63,7 @@ export function DashboardSidebar() {
           <img
             src={xalcoLogoWhite}
             alt="XALCO"
-            className={cn("object-contain transition-all", collapsed ? "h-10 w-10" : "h-10")}
+            className={cn("object-contain transition-all", collapsed ? "h-12 w-12" : "h-14")}
           />
         </div>
       </div>
