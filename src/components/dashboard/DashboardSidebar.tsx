@@ -33,6 +33,7 @@ import {
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import xalcoLogoWhite from "@/assets/xalco-logo-white.png";
+import xalcoIcon from "@/assets/xalco-icon.png";
 
 interface NavItem {
   title: string;
@@ -197,9 +198,9 @@ export function DashboardSidebar() {
       <div className="flex items-center h-16 px-4 border-b border-sidebar-border">
         <div className="flex items-center min-w-0">
           <img
-            src={xalcoLogoWhite}
+            src={collapsed ? xalcoIcon : xalcoLogoWhite}
             alt="XALCO"
-            className={cn("object-contain transition-all", collapsed ? "h-12 w-12" : "h-14")}
+            className={cn("object-contain transition-all", collapsed ? "h-10 w-10" : "h-14")}
           />
         </div>
       </div>
