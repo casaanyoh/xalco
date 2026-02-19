@@ -41,6 +41,14 @@ const ProductPerformance = lazy(() => import("./pages/dashboard/reports/ProductP
 const InventoryReport = lazy(() => import("./pages/dashboard/reports/InventoryReport"));
 const ChannelReport = lazy(() => import("./pages/dashboard/reports/ChannelReport"));
 
+// Accounting
+const AccountingOverview = lazy(() => import("./pages/dashboard/accounting/AccountingOverview"));
+const ChartOfAccounts = lazy(() => import("./pages/dashboard/accounting/ChartOfAccounts"));
+const AccountingTransactions = lazy(() => import("./pages/dashboard/accounting/AccountingTransactions"));
+const AccountingInvoices = lazy(() => import("./pages/dashboard/accounting/AccountingInvoices"));
+const AccountingReports = lazy(() => import("./pages/dashboard/accounting/AccountingReports"));
+const AccountingTaxSettings = lazy(() => import("./pages/dashboard/accounting/AccountingTaxSettings"));
+
 // Settings
 const StoreSettings = lazy(() => import("./pages/dashboard/settings/StoreSettings"));
 const UserManagement = lazy(() => import("./pages/dashboard/settings/UserManagement"));
@@ -94,6 +102,13 @@ const App = () => (
             <Route path="reports/products" element={<Suspense fallback={<PageLoader />}><ProductPerformance /></Suspense>} />
             <Route path="reports/inventory" element={<Suspense fallback={<PageLoader />}><InventoryReport /></Suspense>} />
             <Route path="reports/channels" element={<Suspense fallback={<PageLoader />}><ChannelReport /></Suspense>} />
+            {/* Accounting */}
+            <Route path="accounting" element={<Suspense fallback={<PageLoader />}><AccountingOverview /></Suspense>} />
+            <Route path="accounting/chart-of-accounts" element={<Suspense fallback={<PageLoader />}><ChartOfAccounts /></Suspense>} />
+            <Route path="accounting/transactions" element={<Suspense fallback={<PageLoader />}><AccountingTransactions /></Suspense>} />
+            <Route path="accounting/invoices" element={<Suspense fallback={<PageLoader />}><AccountingInvoices /></Suspense>} />
+            <Route path="accounting/reports" element={<Suspense fallback={<PageLoader />}><AccountingReports /></Suspense>} />
+            <Route path="accounting/tax" element={<Suspense fallback={<PageLoader />}><AccountingTaxSettings /></Suspense>} />
             {/* Settings */}
             <Route path="settings" element={<Suspense fallback={<PageLoader />}><StoreSettings /></Suspense>} />
             <Route path="settings/users" element={<Suspense fallback={<PageLoader />}><UserManagement /></Suspense>} />
