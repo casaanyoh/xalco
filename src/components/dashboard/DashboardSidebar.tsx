@@ -50,6 +50,15 @@ import {
   CircleDollarSign,
   Building2,
   Percent,
+  // Website
+  LayoutTemplate,
+  ShoppingBag,
+  Rss,
+  Navigation,
+  Megaphone,
+  Search,
+  Image,
+  BarChart2,
 } from "lucide-react";
 import { useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
@@ -264,6 +273,42 @@ const navSections: NavSection[] = [
               { title: "Tax Summary", icon: FileSpreadsheet, path: "/dashboard/accounting/tax?tab=summary" },
             ],
           },
+        ],
+      },
+    ],
+  },
+  {
+    groupLabel: "WEBSITE & STORE",
+    groups: [
+      {
+        label: "Website",
+        icon: Globe,
+        collapsible: true,
+        items: [
+          { title: "Overview", icon: LayoutDashboard, path: "/dashboard/website" },
+          { title: "Storefront Builder", icon: LayoutTemplate, path: "/dashboard/website/theme" },
+          {
+            title: "Product Catalog",
+            icon: ShoppingBag,
+            children: [
+              { title: "All Products", icon: Package, path: "/dashboard/website/catalog" },
+              { title: "Collections", icon: Layers, path: "/dashboard/website/catalog?tab=collections" },
+              { title: "Featured Items", icon: Tags, path: "/dashboard/website/catalog?tab=featured" },
+            ],
+          },
+          {
+            title: "Blog",
+            icon: Rss,
+            children: [
+              { title: "All Posts", icon: FileText, path: "/dashboard/website/blog" },
+              { title: "New Post", icon: FilePlus, path: "/dashboard/website/blog?compose=true" },
+            ],
+          },
+          { title: "Navigation", icon: Navigation, path: "/dashboard/website/navigation" },
+          { title: "Banners & Popups", icon: Megaphone, path: "/dashboard/website/banners" },
+          { title: "SEO Manager", icon: Search, path: "/dashboard/website/seo" },
+          { title: "Media Library", icon: Image, path: "/dashboard/website/media" },
+          { title: "Analytics", icon: BarChart2, path: "/dashboard/website/analytics" },
         ],
       },
     ],

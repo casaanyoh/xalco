@@ -58,6 +58,17 @@ const RolesPermissions = lazy(() => import("./pages/dashboard/settings/RolesPerm
 const ReceiptSettings = lazy(() => import("./pages/dashboard/settings/ReceiptSettings"));
 const WebsiteSettings = lazy(() => import("./pages/dashboard/settings/WebsiteSettings"));
 
+// Website / Store
+const WebsiteOverview = lazy(() => import("./pages/dashboard/website/WebsiteOverview"));
+const StorefrontBuilder = lazy(() => import("./pages/dashboard/website/StorefrontBuilder"));
+const ProductCatalog = lazy(() => import("./pages/dashboard/website/ProductCatalog"));
+const BlogManager = lazy(() => import("./pages/dashboard/website/BlogManager"));
+const NavigationManager = lazy(() => import("./pages/dashboard/website/NavigationManager"));
+const BannersPopups = lazy(() => import("./pages/dashboard/website/BannersPopups"));
+const SEOManager = lazy(() => import("./pages/dashboard/website/SEOManager"));
+const MediaLibrary = lazy(() => import("./pages/dashboard/website/MediaLibrary"));
+const StoreAnalytics = lazy(() => import("./pages/dashboard/website/StoreAnalytics"));
+
 const queryClient = new QueryClient();
 
 function PageLoader() {
@@ -125,6 +136,16 @@ const App = () => (
               <Route path="settings/roles" element={<Suspense fallback={<PageLoader />}><RolesPermissions /></Suspense>} />
               <Route path="settings/receipts" element={<Suspense fallback={<PageLoader />}><ReceiptSettings /></Suspense>} />
               <Route path="settings/website" element={<Suspense fallback={<PageLoader />}><WebsiteSettings /></Suspense>} />
+              {/* Website / Store */}
+              <Route path="website" element={<Suspense fallback={<PageLoader />}><WebsiteOverview /></Suspense>} />
+              <Route path="website/theme" element={<Suspense fallback={<PageLoader />}><StorefrontBuilder /></Suspense>} />
+              <Route path="website/catalog" element={<Suspense fallback={<PageLoader />}><ProductCatalog /></Suspense>} />
+              <Route path="website/blog" element={<Suspense fallback={<PageLoader />}><BlogManager /></Suspense>} />
+              <Route path="website/navigation" element={<Suspense fallback={<PageLoader />}><NavigationManager /></Suspense>} />
+              <Route path="website/banners" element={<Suspense fallback={<PageLoader />}><BannersPopups /></Suspense>} />
+              <Route path="website/seo" element={<Suspense fallback={<PageLoader />}><SEOManager /></Suspense>} />
+              <Route path="website/media" element={<Suspense fallback={<PageLoader />}><MediaLibrary /></Suspense>} />
+              <Route path="website/analytics" element={<Suspense fallback={<PageLoader />}><StoreAnalytics /></Suspense>} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
