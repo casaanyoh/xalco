@@ -1,27 +1,41 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Eye, EyeOff, LogIn } from "lucide-react";
 import xalcoLogoDark from "@/assets/xalco-logo-dark.png";
+import { useAuth } from "@/context/AuthContext";
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { isAuthenticated, login } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Where to redirect after login (defaults to /dashboard)
+  const from = (location.state as { from?: { pathname: string } })?.from?.pathname || "/dashboard";
+
+  // If already authenticated, skip login and go straight to destination
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate(from, { replace: true });
+    }
+  }, [isAuthenticated, navigate, from]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // Simulate login delay then redirect
-    setTimeout(() => {
+    try {
+      await login(email, password);
+      navigate(from, { replace: true });
+    } finally {
       setIsLoading(false);
-      navigate("/dashboard");
-    }, 1200);
+    }
   };
 
   return (
