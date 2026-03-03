@@ -70,6 +70,9 @@ const RolesPermissions = lazy(() => import("./pages/dashboard/settings/RolesPerm
 const ReceiptSettings = lazy(() => import("./pages/dashboard/settings/ReceiptSettings"));
 const WebsiteSettings = lazy(() => import("./pages/dashboard/settings/WebsiteSettings"));
 
+// Profile
+const ProfilePage = lazy(() => import("./pages/dashboard/ProfilePage"));
+
 // Website / Store
 const WebsiteOverview = lazy(() => import("./pages/dashboard/website/WebsiteOverview"));
 const StorefrontBuilder = lazy(() => import("./pages/dashboard/website/StorefrontBuilder"));
@@ -126,6 +129,7 @@ const App = () => (
                 }
               >
                 <Route index element={<DashboardHome />} />
+                <Route path="profile" element={<Suspense fallback={<PageLoader />}><ProfilePage /></Suspense>} />
                 {/* Products */}
                 <Route path="products" element={<Suspense fallback={<PageLoader />}><AllProducts /></Suspense>} />
                 <Route path="products/add" element={<Suspense fallback={<PageLoader />}><AddProduct /></Suspense>} />
