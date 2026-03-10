@@ -6,6 +6,7 @@ import { products, categories, Product } from "@/store/data";
 import { useCart } from "@/store/CartContext";
 import { ShoppingBag, Star, Heart, Eye, SlidersHorizontal, Search, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useWishlist } from "@/store/WishlistContext";
 
 function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
