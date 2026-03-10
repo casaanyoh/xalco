@@ -13,6 +13,7 @@ import StoreLayout from "./store/StoreLayout";
 import StoreHome from "./pages/store/StoreHome";
 import { AuthProvider } from "./context/AuthContext";
 import { CartProvider } from "./store/CartContext";
+import { WishlistProvider } from "./store/WishlistContext";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 // Store pages
