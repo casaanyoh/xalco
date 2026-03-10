@@ -219,8 +219,8 @@ export default function StoreLayout() {
             </div>
             {[
               { title: "Shop", links: [{ label: "All Products", to: "/store/shop" }, { label: "Categories", to: "/store/categories" }, { label: "New Arrivals", to: "/store/new-arrivals" }, { label: "Sale", to: "/store/sale" }] },
-              { title: "Support", links: [{ label: "Contact Us", to: "#" }, { label: "FAQ", to: "#" }, { label: "Shipping Info", to: "#" }, { label: "Returns", to: "#" }] },
-              { title: "Company", links: [{ label: "About Us", to: "/store/about" }, { label: "Privacy Policy", to: "#" }, { label: "Terms of Service", to: "#" }, { label: "Blog", to: "#" }] },
+              { title: "Support", links: [{ label: "Contact Us", to: "/store/contact" }, { label: "FAQ", to: "/store/faq" }, { label: "Shipping Info", to: "/store/shipping" }, { label: "Returns", to: "/store/returns" }] },
+              { title: "Company", links: [{ label: "About Us", to: "/store/about" }, { label: "Privacy Policy", to: "/store/privacy" }, { label: "Terms of Service", to: "/store/terms" }, { label: "Blog", to: "/store/blog" }] },
             ].map((col) => (
               <div key={col.title}>
                 <h4 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-4">{col.title}</h4>
