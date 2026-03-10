@@ -24,6 +24,13 @@ const Sale = lazy(() => import("./pages/store/Sale"));
 const About = lazy(() => import("./pages/store/About"));
 const SignIn = lazy(() => import("./pages/store/SignIn"));
 const SignUp = lazy(() => import("./pages/store/SignUp"));
+const Contact = lazy(() => import("./pages/store/Contact"));
+const FAQ = lazy(() => import("./pages/store/FAQ"));
+const ShippingInfo = lazy(() => import("./pages/store/ShippingInfo"));
+const Returns = lazy(() => import("./pages/store/Returns"));
+const PrivacyPolicy = lazy(() => import("./pages/store/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/store/TermsOfService"));
+const Blog = lazy(() => import("./pages/store/Blog"));
 
 // Products
 const AllProducts = lazy(() => import("./pages/dashboard/products/AllProducts"));
