@@ -154,9 +154,11 @@ export default function StoreLayout() {
               <Button variant="ghost" size="icon" className="hidden sm:flex text-muted-foreground hover:text-foreground">
                 <Search className="h-4 w-4" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
-                <Heart className="h-4 w-4" />
-              </Button>
+              <Link to="/store/wishlist">
+                <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground relative">
+                  <Heart className="h-4 w-4" />
+                </Button>
+              </Link>
               <Link to="/store/signin">
                 <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground hidden sm:flex">
                   <User className="h-4 w-4 mr-1.5" />
