@@ -13,6 +13,7 @@ import StoreLayout from "./store/StoreLayout";
 import StoreHome from "./pages/store/StoreHome";
 import { AuthProvider } from "./context/AuthContext";
 import { CartProvider } from "./store/CartContext";
+import { WishlistProvider } from "./store/WishlistContext";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 // Store pages
@@ -31,6 +32,8 @@ const Returns = lazy(() => import("./pages/store/Returns"));
 const PrivacyPolicy = lazy(() => import("./pages/store/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/store/TermsOfService"));
 const Blog = lazy(() => import("./pages/store/Blog"));
+const Wishlist = lazy(() => import("./pages/store/Wishlist"));
+const SearchPage = lazy(() => import("./pages/store/SearchPage"));
 
 // Products
 const AllProducts = lazy(() => import("./pages/dashboard/products/AllProducts"));
@@ -109,6 +112,7 @@ const App = () => (
       <BrowserRouter>
         <AuthProvider>
           <CartProvider>
+          <WishlistProvider>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/login" element={<Login />} />
@@ -131,6 +135,8 @@ const App = () => (
                 <Route path="privacy" element={<Suspense fallback={<PageLoader />}><PrivacyPolicy /></Suspense>} />
                 <Route path="terms" element={<Suspense fallback={<PageLoader />}><TermsOfService /></Suspense>} />
                 <Route path="blog" element={<Suspense fallback={<PageLoader />}><Blog /></Suspense>} />
+                <Route path="wishlist" element={<Suspense fallback={<PageLoader />}><Wishlist /></Suspense>} />
+                <Route path="search" element={<Suspense fallback={<PageLoader />}><SearchPage /></Suspense>} />
               </Route>
 
               {/* Dashboard */}
@@ -194,6 +200,7 @@ const App = () => (
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
+          </WishlistProvider>
           </CartProvider>
         </AuthProvider>
       </BrowserRouter>

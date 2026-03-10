@@ -6,9 +6,11 @@ import { products, categories, Product } from "@/store/data";
 import { useCart } from "@/store/CartContext";
 import { ShoppingBag, Star, Heart, Eye, SlidersHorizontal, Search, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useWishlist } from "@/store/WishlistContext";
 
 function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
+  const { toggleWishlist, isInWishlist } = useWishlist();
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -31,8 +33,15 @@ function ProductCard({ product }: { product: Product }) {
         <div className={`absolute top-3 right-3 flex flex-col gap-1.5 transition-all duration-200 ${
           hovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2"
         }`}>
-          <button className="w-8 h-8 bg-card/90 backdrop-blur-sm rounded-lg border border-border flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors">
-            <Heart className="h-3.5 w-3.5" />
+          <button
+            onClick={() => toggleWishlist(product)}
+            className={`w-8 h-8 backdrop-blur-sm rounded-lg border flex items-center justify-center transition-all ${
+              isInWishlist(product.id)
+                ? "bg-destructive/10 border-destructive/20 text-destructive"
+                : "bg-card/90 border-border hover:text-destructive hover:border-destructive/30"
+            }`}
+          >
+            <Heart className={`h-3.5 w-3.5 ${isInWishlist(product.id) ? "fill-current" : ""}`} />
           </button>
           <button className="w-8 h-8 bg-card/90 backdrop-blur-sm rounded-lg border border-border flex items-center justify-center hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors">
             <Eye className="h-3.5 w-3.5" />
