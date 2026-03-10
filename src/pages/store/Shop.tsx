@@ -10,6 +10,7 @@ import { useWishlist } from "@/store/WishlistContext";
 
 function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
+  const { toggleWishlist, isInWishlist } = useWishlist();
   const [hovered, setHovered] = useState(false);
 
   return (
