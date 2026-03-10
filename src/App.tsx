@@ -200,6 +200,7 @@ const App = () => (
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
+          </WishlistProvider>
           </CartProvider>
         </AuthProvider>
       </BrowserRouter>

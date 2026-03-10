@@ -151,9 +151,11 @@ export default function StoreLayout() {
             </div>
 
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon" className="hidden sm:flex text-muted-foreground hover:text-foreground">
-                <Search className="h-4 w-4" />
-              </Button>
+              <Link to="/store/search">
+                <Button variant="ghost" size="icon" className="hidden sm:flex text-muted-foreground hover:text-foreground">
+                  <Search className="h-4 w-4" />
+                </Button>
+              </Link>
               <Link to="/store/wishlist">
                 <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground relative">
                   <Heart className="h-4 w-4" />
