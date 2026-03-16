@@ -199,9 +199,10 @@ export default function StoreHome() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {featured.map((product) => (
-              <div
+              <Link
                 key={product.id}
-                className="bg-card border border-border rounded-2xl overflow-hidden hover:xalco-shadow-lg transition-all duration-300 group"
+                to={`/store/product/${product.id}`}
+                className="bg-card border border-border rounded-2xl overflow-hidden hover:xalco-shadow-lg transition-all duration-300 group block"
                 onMouseEnter={() => setHoveredProduct(product.id)}
                 onMouseLeave={() => setHoveredProduct(null)}
               >
