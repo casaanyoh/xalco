@@ -61,7 +61,9 @@ function ProductCard({ product }: { product: Product }) {
             <span className="text-[11px] font-medium text-muted-foreground">{product.rating}</span>
           </div>
         </div>
-        <h3 className="text-sm font-semibold text-foreground group-hover:text-accent transition-colors mb-1">{product.name}</h3>
+        <Link to={`/store/product/${product.id}`} className="block">
+          <h3 className="text-sm font-semibold text-foreground group-hover:text-accent transition-colors mb-1">{product.name}</h3>
+        </Link>
         <p className="text-xs text-muted-foreground mb-3 line-clamp-1">{product.description}</p>
         <div className="flex items-center justify-between">
           <div className="flex items-baseline gap-2">

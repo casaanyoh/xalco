@@ -240,10 +240,16 @@ export default function StoreLayout() {
           </div>
           <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-muted-foreground">© 2026 XALCO. All rights reserved.</p>
-            <div className="flex items-center gap-3">
-              {["Visa", "MC", "PayPal", "Apple Pay"].map((method) => (
-                <div key={method} className="px-2.5 py-1 rounded-md bg-muted/50 border border-border text-[9px] font-medium text-muted-foreground">
-                  {method}
+            <div className="flex items-center gap-2">
+              {[
+                { name: "Visa", bg: "from-[hsl(220,80%,50%)] to-[hsl(220,80%,38%)]", label: "VISA", textClass: "text-white font-bold italic text-[10px]" },
+                { name: "MasterCard", bg: "from-[hsl(15,90%,55%)] to-[hsl(40,95%,50%)]", label: "MC", textClass: "text-white font-bold text-[10px]" },
+                { name: "PayPal", bg: "from-[hsl(210,70%,45%)] to-[hsl(200,80%,55%)]", label: "PayPal", textClass: "text-white font-semibold text-[9px]" },
+                { name: "Apple Pay", bg: "from-[hsl(0,0%,10%)] to-[hsl(0,0%,20%)]", label: " Pay", textClass: "text-white font-semibold text-[10px]" },
+                { name: "EVC Plus", bg: "from-[hsl(145,65%,40%)] to-[hsl(145,65%,30%)]", label: "EVC+", textClass: "text-white font-bold text-[9px]" },
+              ].map((pm) => (
+                <div key={pm.name} className={`h-7 px-2.5 rounded-md bg-gradient-to-r ${pm.bg} flex items-center justify-center shadow-sm`} title={pm.name}>
+                  <span className={pm.textClass}>{pm.label}</span>
                 </div>
               ))}
             </div>
