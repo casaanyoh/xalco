@@ -254,7 +254,7 @@ export default function StoreHome() {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
