@@ -19,6 +19,7 @@ function ProductCard({ product }: { product: Product }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
+      <Link to={`/store/product/${product.id}`} className="block">
       <div className="aspect-[4/3] bg-gradient-to-br from-secondary to-muted flex items-center justify-center relative">
         <span className="text-5xl transition-transform duration-300 group-hover:scale-110">{product.emoji}</span>
         {product.badge && (
