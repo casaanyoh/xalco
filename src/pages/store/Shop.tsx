@@ -49,6 +49,7 @@ function ProductCard({ product }: { product: Product }) {
           </button>
         </div>
       </div>
+      </Link>
       <div className="p-5">
         <div className="flex items-center gap-2 mb-2">
           <Link to={`/store/categories/${product.category.toLowerCase()}`} className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider hover:text-accent transition-colors">
