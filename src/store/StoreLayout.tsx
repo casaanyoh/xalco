@@ -94,9 +94,11 @@ function CartSheet() {
                 <span>Total</span>
                 <span>${(totalPrice + (totalPrice >= 50 ? 0 : 4.99)).toFixed(2)}</span>
               </div>
-              <Button className="w-full h-11 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-                Checkout — ${(totalPrice + (totalPrice >= 50 ? 0 : 4.99)).toFixed(2)}
-              </Button>
+              <Link to="/store/checkout">
+                <Button className="w-full h-11 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+                  Checkout — ${(totalPrice + (totalPrice >= 50 ? 0 : 4.99)).toFixed(2)}
+                </Button>
+              </Link>
             </div>
           </>
         )}
