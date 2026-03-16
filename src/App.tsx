@@ -34,6 +34,7 @@ const TermsOfService = lazy(() => import("./pages/store/TermsOfService"));
 const Blog = lazy(() => import("./pages/store/Blog"));
 const Wishlist = lazy(() => import("./pages/store/Wishlist"));
 const SearchPage = lazy(() => import("./pages/store/SearchPage"));
+const ProductDetail = lazy(() => import("./pages/store/ProductDetail"));
 
 // Products
 const AllProducts = lazy(() => import("./pages/dashboard/products/AllProducts"));
