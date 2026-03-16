@@ -19,6 +19,7 @@ function ProductCard({ product }: { product: Product }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
+      <Link to={`/store/product/${product.id}`} className="block">
       <div className="aspect-[4/3] bg-gradient-to-br from-secondary to-muted flex items-center justify-center relative">
         <span className="text-5xl transition-transform duration-300 group-hover:scale-110">{product.emoji}</span>
         {product.badge && (
@@ -48,6 +49,7 @@ function ProductCard({ product }: { product: Product }) {
           </button>
         </div>
       </div>
+      </Link>
       <div className="p-5">
         <div className="flex items-center gap-2 mb-2">
           <Link to={`/store/categories/${product.category.toLowerCase()}`} className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider hover:text-accent transition-colors">
@@ -59,7 +61,9 @@ function ProductCard({ product }: { product: Product }) {
             <span className="text-[11px] font-medium text-muted-foreground">{product.rating}</span>
           </div>
         </div>
-        <h3 className="text-sm font-semibold text-foreground group-hover:text-accent transition-colors mb-1">{product.name}</h3>
+        <Link to={`/store/product/${product.id}`} className="block">
+          <h3 className="text-sm font-semibold text-foreground group-hover:text-accent transition-colors mb-1">{product.name}</h3>
+        </Link>
         <p className="text-xs text-muted-foreground mb-3 line-clamp-1">{product.description}</p>
         <div className="flex items-center justify-between">
           <div className="flex items-baseline gap-2">
