@@ -318,7 +318,7 @@ export default function StoreHome() {
                   </Button>
                 </Link>
                 <Link to="/store/about">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/15 text-primary-foreground hover:bg-primary-foreground/10 h-12">
+                  <Button size="lg" variant="outline" className="border-accent/30 text-accent hover:bg-accent/10 h-12">
                     Learn More
                   </Button>
                 </Link>
