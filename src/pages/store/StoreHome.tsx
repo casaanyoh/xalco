@@ -61,7 +61,7 @@ export default function StoreHome() {
                   </Button>
                 </Link>
                 <Link to="/store/categories">
-                  <Button size="lg" variant="outline" className="border-primary-foreground/15 text-primary-foreground hover:bg-primary-foreground/10 h-12 w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="border-accent/30 text-accent hover:bg-accent/10 h-12 w-full sm:w-auto">
                     Browse Categories
                   </Button>
                 </Link>
